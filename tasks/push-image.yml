@@ -2,6 +2,7 @@
       command: sudo docker push kiranp23/webapp:latest
       args:
          warn: no
+      become_user: ubuntu
 
     - name:  stopping container
       command: sudo docker stop casestudy

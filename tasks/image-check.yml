@@ -1,7 +1,7 @@
 - name: check if already container is running or not
-  shell: sudo docker ps | grep casestudy
+  shell: docker ps | grep casestudy
   register: result
 
 - name: stop container if result is true
-  shell: sudo docker stop casestudy && sudo docker rm casestudy
+  shell: docker stop casestudy && docker rm casestudy
   when: result is succeeded

@@ -1,9 +1,9 @@
     - name: Build docker image
-      command: sudo docker build -t kiranp23/webapp:latest .
+      command: docker build -t kiranp23/webapp:latest .
       args:
          warn: no
 
     - name: Run Docker image
-      command: sudo docker run -p 7010:8080 --name casestudy -d kiranp23/webapp:latest
+      command: docker run -p 7010:8080 --name casestudy -d kiranp23/webapp:latest
       args:
          warn: no

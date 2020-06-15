@@ -1,5 +1,6 @@
 - name: building image and checking health of url
   hosts: localhost
+  become: yes
   
   vars:
    hub_username: "docker_user"

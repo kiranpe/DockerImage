@@ -4,6 +4,7 @@
         password: "{{ hub_password }}"
         reauthorize: yes
       register: login_results
+      become: yes
 
     - debug:
         var: login_results

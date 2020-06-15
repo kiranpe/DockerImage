@@ -10,7 +10,7 @@
 
     - name: check container is up or not
       shell: |
-          until $(curl -kIs http://{{ external_ip }}:7010/webapp >> /sites/logs/image.log && grep 200 /sites/logs/image.log > /dev/null); do
+          until $(curl -kIs http://{{ external_ip }}:7010/webapp/login.html >> /sites/logs/image.log && grep 200 /sites/logs/image.log > /dev/null); do
            printf "Container is not up..Checking again.."
            sleep 5
           done

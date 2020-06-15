@@ -3,5 +3,6 @@
 
   tasks:
   - include: tasks/build-docker-image.yml
+  - include: tasks/image-check.yml
   - include: tasks/check-status.yml
   - include: tasks/push-image.yml
